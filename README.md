@@ -1,0 +1,2 @@
+# mvimrc
+vimrc minimal
