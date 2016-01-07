@@ -17,5 +17,5 @@ ino mn int main()
 filetype indent on
 colo torte
 set cursorline
-hi CursorLine   cterm=NONE ctermbg=black ctermfg=white
+hi CursorLine   cterm=NONE ctermbg=black ctermfg=green
 filetype plugin indent on
