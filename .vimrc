@@ -14,6 +14,7 @@ ino ( ()<left>
 ino [ []<left>
 ino { {}<left>
 ino < <><left>
+ino {<CR> {<CR>}<ESC>O
 ino inc #include <><left>
 ino mn int main()
 
