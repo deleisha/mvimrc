@@ -22,7 +22,7 @@ colo torte
 
 "cursorline and it's highlighting
 set cursorline
-hi CursorLine   cterm=NONE ctermbg=black ctermfg=green
+hi CursorLine   cterm=NONE ctermbg=NONE ctermfg=green
 
 filetype indent on
 filetype plugin indent on
