@@ -6,6 +6,7 @@ set softtabstop=4
 set shiftwidth=4
 set expandtab
 set showcmd
+set laststatus=2
 
 
 "mappings
