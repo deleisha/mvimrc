@@ -5,6 +5,7 @@ set smartindent
 set softtabstop=4
 set shiftwidth=4
 set expandtab
+set showcmd
 
 
 "mappings
