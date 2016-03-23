@@ -7,6 +7,7 @@ set shiftwidth=4
 set expandtab
 set showcmd
 set laststatus=2
+match ErrorMsg '\%>80v.\+'
 
 
 "mappings
