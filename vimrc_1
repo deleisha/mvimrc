@@ -1,1 +1,42 @@
 
+nnoremap <f9> :make<CR> :copen<CR>
+
+set textwidth=79
+syntax on
+set hlsearch
+set autoindent
+set smartindent
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set laststatus=2
+set t_Co=256
+match ErrorMsg '\%>80v.\+'
+set noshowmode
+
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap inc #include <><left>
+inoremap mn int main()
+filetype indent on
+
+set cursorline
+hi cursorline cterm=NONE ctermbg=NONE ctermfg=darkgreen
+filetype plugin indent on
+set showcmd
+hi statusline ctermfg=Lightblue
+
+call plug#begin()
+Plug 'scrooloose/nerdtree'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'scrooloose/nerdcommenter'
+call plug#end()
+nnoremap <F2> :NERDTreeToggle<CR>
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
