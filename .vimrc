@@ -1,4 +1,4 @@
-set hlsearch
+set hlsearch                                                                                                                                   
 set aw
 set ai
 set smartindent
@@ -11,15 +11,10 @@ match ErrorMsg '\%>80v.\+'
 
 
 "mappings
-ino " ""<left>
-ino ' ''<left>
-ino ( ()<left>
-ino [ []<left>
-ino { {}<left>
-ino < <><left>
 ino {<CR> {<CR>}<ESC>O
 ino inc #include <><left>
 ino mn int main()
+set pastetoggle=<F2>
 
 colo torte
 
@@ -34,7 +29,6 @@ filetype plugin indent on
 set splitbelow
 
 "neovim embedded terminal setting
-"
 if has('nvim')
     tnoremap <Esc> <C-\><C-n>
 endif
