@@ -1,0 +1,57 @@
+set hlsearch
+set aw
+set ai
+set smartindent
+set softtabstop=4
+set shiftwidth=4
+set expandtab
+set showcmd
+set laststatus=2
+
+" mappings
+ino inc #include <><left>
+ino mn int main()
+
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
+
+
+set pastetoggle=<F2>
+
+syntax enable
+colorscheme torte
+
+"cursorline and it's highlighting
+set cursorline
+hi CursorLine   cterm=NONE ctermbg=NONE ctermfg=green
+
+filetype indent on
+filetype plugin indent on
+
+"set path+=**
+
+"neovim embedded terminal setting
+if has('nvim')
+    tnoremap <Esc> <C-\><C-n>
+endif
+
+pa termdebug
+let g:termdebug_wide=1
+
+set rtp+=~/.fzf
+" FZF key bindings
+nnoremap <C-f> :FZF<CR>
+
+set grepprg=rg\ --vimgrep\ --smart-case\ --follow
+set makeprg=amake\ -fni\ $*
+
+augroup quickfix
+    autocmd!
+    autocmd QuickFixCmdPost [^l]* cwindow
+    autocmd QuickFixCmdPost l* lwindow
+augroup END
+
+nnoremap <silent> <leader>t :term<CR>
+nnoremap <leader>g :Termdebug<CR> <C-w>_
+nnoremap <leader>j [I:let nr = input("Which one: ")<Bar>exe "normal " . nr ."[\t"<CR>
+nnoremap <leader>q :grep <cword> <CR>
