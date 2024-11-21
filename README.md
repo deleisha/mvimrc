@@ -28,4 +28,8 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
 source ~/.zshrc
 ```
+Install rg:
+```
+Download ripgrep from here and install with rpm -Uvh on RHEL system
+https://rpmfind.net/linux/rpm2html/search.php?query=ripgrep
 ```
